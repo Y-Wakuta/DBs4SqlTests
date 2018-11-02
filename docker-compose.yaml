@@ -1,0 +1,9 @@
+version: '2'
+services:
+  pg:
+    build: .
+    container_name: "Pg4WebTest"
+    volumes:
+      - "./scripts:/scripts"
+    ports:
+      - "5432:5432"
