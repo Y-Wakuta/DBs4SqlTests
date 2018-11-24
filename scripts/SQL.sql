@@ -1,12 +1,10 @@
---sample
---select * from t1 where order by $0 [desc]
---delete from t1 where c1 == ?
---drop database hoge;
---create database hoge;
+-- sample
+-- select * from t1 where order by $0 [desc]
+-- delete from t1 where c1 == ?
+-- drop database hoge;
+-- create database hoge;
 
---CREATE DATABASE bench;
-
-\c bench;
+-- CREATE DATABASE bench;
 
 CREATE TABLE IF NOT EXISTS users(
 	id serial primary key,
