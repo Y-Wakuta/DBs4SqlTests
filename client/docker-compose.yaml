@@ -1,0 +1,8 @@
+version: '2'
+services:
+  client:
+    build: ./
+    container_name: "client"
+    volumes:
+      - "./:/scripts"
+    tty: true

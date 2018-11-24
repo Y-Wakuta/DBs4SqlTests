@@ -16,3 +16,13 @@ services:
       - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=hogefugapiyo
+      - MYSQL_DATABASE=mysql
+  client:
+    build: ./client
+    container_name: "client"
+    volumes:
+      - "./script:/scripts"
+    links:
+      - mysql
+      - postgres
+    tty: true
