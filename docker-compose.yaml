@@ -7,6 +7,8 @@ services:
       - "./scripts:/scripts"
     ports:
       - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
   mysql:
     build: ./mysql
     container_name: "mysql"
@@ -21,7 +23,7 @@ services:
     build: ./client
     container_name: "client"
     volumes:
-      - "./script:/scripts"
+      - "./scripts:/scripts"
     links:
       - mysql
       - postgres
