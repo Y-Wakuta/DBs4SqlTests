@@ -9,3 +9,6 @@ psql -h postgres -U postgres -d postgres  -f $1
 
 recho "MySQL"
 mysql -hmysql -uroot -phogefugapiyo mysql < $1
+
+recho "SQLite"
+sqlite3 ../sqlite/sqlite < $1
